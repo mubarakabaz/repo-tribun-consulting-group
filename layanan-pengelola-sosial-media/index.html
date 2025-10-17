@@ -4,63 +4,222 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tribun Consulting Group - Layanan Social Media Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS untuk Overlay Background */
+        .hero-bg {
+            background-image: url('[URL_GAMBAR_BACKGROUND_ANDA]'); /* GANTI DENGAN URL GAMBAR ASLI ANDA */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
 </head>
-<body style="margin: 0; font-family: Arial, sans-serif; line-height: 1.6; background-color: #f4f4f9;">
+<body class="font-sans antialiased bg-gray-50">
 
-    <section id="hero" style="background-color: #007BFF; color: white; padding: 80px 5%; text-align: center; min-height: 80vh; display: flex; flex-direction: column; justify-content: center;">
-        <h1 style="font-size: 2.8em; margin-bottom: 15px;">Ubah Scroll Jadi Cuan!</h1>
-        <h2 style="font-size: 1.5em; font-weight: 300; margin-bottom: 30px;">Kelola Social Media Anda Secara Profesional dan Lihat Angka Penjualan Melambung.</h2>
-        <p style="font-size: 1.1em; max-width: 700px; margin: 0 auto 40px;">Stop pusing memikirkan konten. **Tribun Consulting Group** mengambil alih strategi, desain premium, dan optimasi iklan untuk *growth* bisnis Anda yang terukur.</p>
+    <section id="hero" class="hero-bg relative min-h-screen flex items-center justify-center py-20">
+        <div class="absolute inset-0 bg-black/70 z-10"></div>
+
+        <div class="relative z-20 text-white text-center max-w-4xl px-4">
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                Napas Bisnis Anda Ada di Sosial Media. Biar <span class="text-yellow-400">TRIBUN</span> yang Kelola, Anda Fokus Kembangkan Usaha.
+            </h1>
+
+            <p class="text-lg md:text-xl mb-10 text-gray-200 max-w-3xl mx-auto">
+                Di era persaingan ketat, media sosial bukan pilihan, tapi keharusan. Kami adalah **Tribun Consulting Group**, Digital Marketing Top 1 di Makassar, siap menjadi tim ahli Anda.
+            </p>
+
+            <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20untuk%20konsultasi%20gratis%20dengan%20Tribun%20Consulting%20Group" 
+               target="_blank" 
+               class="inline-block bg-green-600 hover:bg-green-700 text-white text-xl font-bold py-4 px-10 rounded-lg shadow-lg transition duration-300 transform hover:scale-105">
+                Mulai Konsultasi Gratis Sekarang!
+            </a>
+            <p class="mt-4 text-sm opacity-80">(Klik untuk terhubung langsung via WhatsApp)</p>
+        </div>
+    </section>
+
+    <section id="statistik" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-4">
+                Mengubah Data Menjadi Strategi, Strategi Menjadi Penjualan.
+            </h2>
+            <p class="text-lg text-gray-500 mb-12">Digital Marketing Terbaik yang Efektif & Progresif.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-yellow-500 mb-3 font-extrabold">276.4 Juta</div>
+                    <h3 class="text-xl font-semibold mb-2">Total Pengguna Aktif</h3>
+                    <p class="text-gray-600">Calon Pelanggan Aktif Siap Dijangkau di Social Media.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-yellow-500 mb-3 font-extrabold">3 Jam 18 Menit</div>
+                    <h3 class="text-xl font-semibold mb-2">Rata-rata Screen Time Harian</h3>
+                    <p class="text-gray-600">Total Waktu Audiens Anda Terpapar Konten Kompetitor.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-yellow-500 mb-3 font-extrabold">Mencari & Membeli</div>
+                    <h3 class="text-xl font-semibold mb-2">Motivasi Utama Pengguna</h3>
+                    <p class="text-gray-600">Mencari Inspirasi Produk & Langsung Melakukan Transaksi.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-yellow-500 mb-3 font-extrabold">178.9 Juta</div>
+                    <h3 class="text-xl font-semibold mb-2">Total Transaksi Internet</h3>
+                    <p class="text-gray-600">Bukti Potensi Pasar Digital yang Tidak Boleh Anda Abaikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="masalah-solusi" class="py-16 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 text-center mb-12">
+                JEBAKAN *TRAFFIC* BESAR: Mengapa Konten Anda Viral, Tapi Gagal Menghasilkan Penjualan?
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">❌ Fokus Hiburan, Minim Penjualan</h3>
+                        <p class="text-gray-700">Konten hanya berorientasi *entertainment* (lucu/tren) tanpa didukung tujuan pemasaran yang jelas.</p>
+                    </div>
+                    <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">❌ Alur Konversi Terputus</h3>
+                        <p class="text-gray-700">Tidak adanya Sales Funnel yang terstruktur, menyebabkan *traffic* besar terbuang tanpa menghasilkan transaksi.</p>
+                    </div>
+                    <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-red-700 mb-2">❌ Strategi *Missing Link*</h3>
+                        <p class="text-gray-700">Gagal mengintegrasikan Riset Audiens, Kreatif, dan Distribusi Berbasis Data yang tepat sasaran.</p>
+                    </div>
+                </div>
+
+                <div class="bg-blue-600 p-8 rounded-xl shadow-2xl text-white">
+                    <h3 class="text-3xl font-extrabold mb-4">Kami Perbaiki *Link* yang Hilang Itu!</h3>
+                    <p class="text-lg mb-6">
+                        **Tribun Consulting Group** memastikan setiap *view* selangkah lebih dekat ke **pembelian**. Kami ubah *traffic* menjadi **pelanggan setia** melalui strategi terintegrasi.
+                    </p>
+                    <a href="#layanan" class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-bold py-3 px-8 rounded-lg transition duration-300">
+                        Lihat Strategi Kami
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-16 px-4 bg-white text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-800 mb-12">
+            Kami Mengelola A-Z Social Media Anda
+        </h2>
         
-        <a href="#kontak" style="background-color: #FFC107; color: #111; padding: 15px 35px; text-decoration: none; font-size: 1.2em; font-weight: bold; border-radius: 5px; transition: background-color 0.3s; display: inline-block; margin-top: 10px;">
-            Dapatkan Proposal Gratis Sekarang
-        </a>
-    </section>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <div class="p-8 border-t-4 border-blue-600 bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-blue-600 mb-4">💡</div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">Strategi Berbasis Data</h3>
+                <p class="text-gray-600">Riset audiens, kompetitor, dan penetapan *Tone of Voice* brand untuk fondasi konten yang menghasilkan ROI.</p>
+            </div>
 
-    <section id="masalah" style="padding: 60px 5%; text-align: center; background-color: white;">
-        <h2 style="font-size: 2em; color: #333; margin-bottom: 40px;">Anda Mengalami Ini?</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 20px;">
-            <div style="flex-basis: 300px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h3 style="color: #DC3545;">❌ Konten Stagnan</h3>
-                <p>Postingan harian terasa sepi, *engagement* rendah, dan tidak mengikuti tren terbaru.</p>
+            <div class="p-8 border-t-4 border-blue-600 bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-blue-600 mb-4">🎨</div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">Produksi Konten Premium</h3>
+                <p class="text-gray-600">Desain visual *high-impact*, *copywriting* persuasif, dan produksi *Reels* yang dioptimalkan untuk viralitas.</p>
             </div>
-            <div style="flex-basis: 300px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h3 style="color: #DC3545;">❌ Waktu Terbuang</h3>
-                <p>Anda menghabiskan terlalu banyak waktu di Social Media, padahal harusnya fokus pada produk/layanan inti.</p>
+
+            <div class="p-8 border-t-4 border-blue-600 bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-blue-600 mb-4">📈</div>
+                <h3 class="text-2xl font-bold mb-3 text-gray-800">Optimasi & Pelaporan</h3>
+                <p class="text-gray-600">Manajemen Iklan Berbayar efektif, interaksi aktif, dan laporan bulanan transparan mengenai konversi.</p>
             </div>
-            <div style="flex-basis: 300px; padding: 20px; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
-                <h3 style="color: #DC3545;">❌ Iklan Boros</h3>
-                <p>Sudah beriklan, tapi ROI (Return on Investment) tidak jelas dan target audiens meleset.</p>
-            </div>
-        </div>
-        <div style="margin-top: 50px;">
-            <h3 style="color: #007BFF; font-size: 1.8em;">Tribun Consulting Group adalah Jawabannya.</h3>
         </div>
     </section>
 
-    <section id="layanan" style="background-color: #f4f4f9; padding: 60px 5%; text-align: center;">
-        <h2 style="font-size: 2em; color: #333; margin-bottom: 50px;">Kami Mengelola A-Z Social Media Anda</h2>
-        <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 30px;">
-            <div style="flex-basis: 300px; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 8px 15px rgba(0,0,0,0.1);">
-                <div style="font-size: 2em; color: #007BFF; margin-bottom: 10px;">💡</div>
-                <h3 style="color: #333; margin-bottom: 15px;">Strategi Berbasis Data</h3>
-                <p>Riset audiens, kompetitor, dan penetapan *Tone of Voice* untuk fondasi konten yang kuat.</p>
+    <section id="harga" class="py-20 px-4 bg-blue-600 text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-12">
+                Pilih Paket Yang Tepat Untuk Bisnis Anda
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <div class="p-8 bg-white text-gray-800 rounded-xl shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4">PAKET STRATEGIS</h3>
+                        <p class="text-4xl font-extrabold mb-6">Rp. 3 Juta<span class="text-xl font-normal text-gray-500">/bulan</span></p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3">12 Konten Feed/Bulan</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Riset Hashtag & Caption Profesional</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Laporan Kinerja Bulanan</span></li>
+                            <li class="flex items-center">❌ <span class="ml-3 text-red-500">Tanpa Iklan Berbayar</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20dengan%20Paket%20Strategis%20Tribun%20Consulting%20Group" 
+                       target="_blank" 
+                       class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300 text-center">
+                        Pilih Paket Ini
+                    </a>
+                </div>
+
+                <div class="p-10 bg-yellow-400 text-gray-900 rounded-xl shadow-2xl ring-4 ring-white flex flex-col justify-between transform scale-105">
+                    <div>
+                        <div class="text-sm font-bold bg-blue-600 text-white py-1 px-3 rounded-full inline-block mb-3">Paling Populer</div>
+                        <h3 class="text-3xl font-extrabold mb-4">PAKET JUARA</h3>
+                        <p class="text-5xl font-extrabold mb-6">Rp. 5 Juta<span class="text-xl font-normal">/bulan</span></p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">20 Konten Feed/Reels/Bulan</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Strategi & Desain Premium</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Manajemen Iklan Berbayar *</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Fast Response Admin</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20dengan%20Paket%20Juara%20Tribun%20Consulting%20Group" 
+                       target="_blank" 
+                       class="mt-4 bg-green-600 hover:bg-green-700 text-white font-bold py-4 rounded-lg transition duration-300 text-center">
+                        Ambil Paket Juara
+                    </a>
+                </div>
+
+                <div class="p-8 bg-white text-gray-800 rounded-xl shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-blue-600 mb-4">PAKET KORPORAT</h3>
+                        <p class="text-4xl font-extrabold mb-6">Konsultasi Harga</p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3">Custom Konten Tak Terbatas</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Dedicated Account Manager</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Pelatihan Tim Internal Klien</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Prioritas Optimasi & Riset</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20membutuhkan%20Paket%20Korporat%20Tribun%20Consulting%20Group" 
+                       target="_blank" 
+                       class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 rounded-lg transition duration-300 text-center">
+                        Minta Kustomisasi
+                    </a>
+                </div>
             </div>
-            <div style="flex-basis: 300px; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 8px 15px rgba(0,0,0,0.1);">
-                <div style="font-size: 2em; color: #007BFF; margin-bottom: 10px;">🎨</div>
-                <h3 style="color: #333; margin-bottom: 15px;">Produksi Konten Premium</h3>
-                <p>Desain visual *high-impact*, *copywriting* persuasif, dan produksi *Reels/TikTok* yang menarik.</p>
-            </div>
-            <div style="flex-basis: 300px; padding: 30px; background-color: white; border-radius: 8px; box-shadow: 0 8px 15px rgba(0,0,0,0.1);">
-                <div style="font-size: 2em; color: #007BFF; margin-bottom: 10px;">📈</div>
-                <h3 style="color: #333; margin-bottom: 15px;">Optimasi & Pelaporan</h3>
-                <p>Manajemen Iklan Berbayar efektif dan laporan bulanan transparan mengenai ROI dan *Engagement*.</p>
-            </div>
+            <p class="mt-8 text-sm text-white/80">*Harga belum termasuk budget iklan berbayar.</p>
         </div>
-        
-        <a href="#kontak" style="background-color: #007BFF; color: white; padding: 15px 35px; text-decoration: none; font-size: 1.1em; font-weight: bold; border-radius: 5px; transition: background-color 0.3s; display: inline-block; margin-top: 50px;">
-            Saya Ingin Konsultasi Gratis
-        </a>
     </section>
 
-    <section id="bukti" style="padding: 60px 5%; text-align: center; background-color:
+    <section id="kontak" class="py-16 px-4 bg-gray-900 text-white text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">
+                Waktunya Delegasikan, Raih Pertumbuhan Terukur.
+            </h2>
+            <p class="text-lg mb-8 text-gray-400">
+                Jangan biarkan potensi pasar Anda hilang. Ambil keputusan investasi digital yang cerdas hari ini!
+            </p>
+            
+            <a href="https://wa.me/6285346098979" 
+               target="_blank" 
+               class="inline-block bg-yellow-400 hover:bg-yellow-500 text-gray-900 text-2xl font-bold py-4 px-12 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                Mulai Konsultasi & Tingkatkan Bisnis!
+            </a>
+
+            <div class="mt-12 pt-8 border-t border-gray-700 text-sm text-gray-400">
+                <p>&copy; 2024 Tribun Consulting Group. All Rights Reserved.</p>
+                <p class="mt-2">Email: info@tribunconsulting.com | WhatsApp: +62 853-4609-8979</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
