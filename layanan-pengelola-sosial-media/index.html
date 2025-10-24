@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribun Consulting Group - Layanan Social Media Profesional</title>
+    <meta content="website" property="og:type">
+    <meta name="generator" content="Mubarakabaz">
+
+    <link href="img/favicon.png" rel="icon">
+    <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <meta name="description" content="Tribun Consulting Group: Jasa Social Media Management & Digital Marketing Top 1 di Makassar. Tingkatkan penjualan, bangun citra profesional, dan dapatkan ROI terukur. Fokus pada strategi lokal untuk klinik, F&B, dan jasa." />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', 'YOUR_PIXEL_ID'); /* 🚨 GANTI ID INI */
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1" /* 🚨 GANTI ID INI */
+    /></noscript>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    // Mendefinisikan font Poppins
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    // Palet Warna Kustom
+                    colors: {
+                        'primary-gold': '#D4AE4C',
+                        'secondary-gold': '#D0B35E',
+                        'gunmetal': '#1B2D32',
+                        'slate-gray': '#6F7B7F',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom CSS untuk Overlay Background */
+        .hero-bg {
+            background-image: url('https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/bg-hero.png'); /* GANTI DENGAN URL GAMBAR ASLI ANDA */
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* --- KUNCI AGAR TIDAK TERPUTUS: ---
+            1. Duplikasi konten di dalam .logo-track dan .logo-track:after
+            2. Animasi hanya bergerak -50% (setengah dari total track 200%)
+        */
+        .logo-scroll-container {
+            overflow: hidden; 
+            white-space: nowrap; 
+            padding: 30px 0;
+            background-color: #f7f7f7;
+            border-top: 1px solid #eeeeee;
+            border-bottom: 1px solid #eeeeee;
+            font-family: Arial, sans-serif; /* Pastikan font tetap terbaca */
+        }
+
+        .logo-track {
+            display: inline-block;
+            animation: scroll-logo 30s linear infinite; 
+            width: max-content;
+        }
+
+        /* Membuat duplikasi konten yang sama di belakang logo utama */
+        .logo-track:after {
+            content: attr(data-logos); 
+            display: inline-block;
+            padding-left: 20px; 
+        }
+
+        .logo-item {
+            display: inline-block;
+            margin: 0 30px;
+            height: 100px;
+            vertical-align: middle; /* Memastikan logo di tengah vertikal */
+        }
+
+        .logo-item img {
+            max-height: 100%;
+            width: auto;
+            filter: grayscale(100%);
+            opacity: 0.6;
+            transition: filter 0.3s, opacity 0.3s;
+        }
+
+        .logo-item:hover img {
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        /* Keyframes: Menggeser track sejauh 50% */
+        @keyframes scroll-logo {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); } 
+        }
+
+        /* Optional: Jeda animasi saat kursor di atas kontainer */
+        .logo-scroll-container:hover .logo-track {
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-white">
+
+    <section id="hero" class="hero-bg relative min-h-screen flex items-center justify-center py-20">
+        <div class="absolute inset-0 bg-gunmetal/80 z-10"></div>
+
+        <div class="relative z-20 text-white text-center max-w-4xl px-4">
+            
+            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 tracking-tight">
+                Napas Bisnis Anda Ada di Sosial Media. Biar <span class="text-primary-gold">TRIBUN</span> yang Kelola, Anda Fokus Kembangkan Usaha.
+            </h1>
+
+            <p class="text-lg md:text-xl mb-10 text-[#e1e2e3] max-w-3xl mx-auto">
+                Di era persaingan ketat, media sosial bukan pilihan, tapi keharusan. Kami adalah <strong>Tribun Consulting Group</strong>, Digital Marketing Top 1 di Makassar, siap menjadi tim ahli Anda.
+            </p>
+
+            <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20untuk%20konsultasi%20gratis%20dengan%20Tribun%20Consulting%20Group" 
+               target="_blank" onclick="fbq('track', 'Contact');"
+               class="inline-block bg-primary-gold hover:bg-secondary-gold text-gunmetal text-xl font-bold py-4 px-10 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                Mulai Konsultasi Gratis Sekarang!
+            </a>
+            <p class="mt-4 text-sm text-[#d4d7d9]">(Klik untuk terhubung langsung via WhatsApp)</p>
+        </div>
+    </section>
+
+    <section id="statistik" class="py-16 px-4 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gunmetal mb-4">
+                Mengubah Data Menjadi Strategi, <br> Strategi Menjadi Penjualan.
+            </h2>
+            <p class="text-lg text-slate-gray mb-12">Digital Marketing Terbaik yang Efektif & Progresif.</p>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-t-4 border-primary-gold hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-primary-gold mb-3 mx-auto" style="width: fit-content;">
+                        <span class="text-5xl">
+                            <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/icon/60.png" alt="">
+                        </span> </div>
+                    
+                    <div class="text-4xl text-primary-gold mb-3 font-extrabold">276.4 Juta</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gunmetal">Total Pengguna Aktif</h3>
+                    <p class="text-slate-gray">Calon Pelanggan Aktif Siap Dijangkau di Social Media.</p>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-t-4 border-primary-gold hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-primary-gold mb-3 mx-auto" style="width: fit-content;">
+                        <span class="text-5xl">
+                            <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/icon/50.png" alt="">
+                        </span> </div>
+                    
+                    <div class="text-4xl text-primary-gold mb-3 font-extrabold">3 Jam 18 Menit</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gunmetal">Rata-rata Screen Time Harian</h3>
+                    <p class="text-slate-gray">Total Waktu Audiens Anda Terpapar Konten Kompetitor.</p>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-t-4 border-primary-gold hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-primary-gold mb-3 mx-auto" style="width: fit-content;">
+                        <span class="text-5xl">
+                            <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/icon/motivasi.png" alt="">
+                        </span> </div>
+                    
+                    <div class="text-4xl text-primary-gold mb-3 font-extrabold">Mencari & Membeli</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gunmetal">Motivasi Utama Pengguna</h3>
+                    <p class="text-slate-gray">Mencari Inspirasi Produk & Langsung Melakukan Transaksi.</p>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-md border-t-4 border-primary-gold hover:shadow-xl transition duration-300">
+                    <div class="text-4xl text-primary-gold mb-3 mx-auto" style="width: fit-content;">
+                        <span class="text-5xl">
+                            <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/icon/50%20(2).png" alt="">
+                        </span> </div>
+                    
+                    <div class="text-4xl text-primary-gold mb-3 font-extrabold">178.9 Juta</div>
+                    <h3 class="text-xl font-semibold mb-2 text-gunmetal">Total Transaksi Internet</h3>
+                    <p class="text-slate-gray">Bukti Potensi Pasar Digital yang Tidak Boleh Anda Abaikan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our Client Section -->
+       
+    <section id="logo-slider" class="py-12 bg-gray-50">
+        <!-- <div class="max-w-6xl mx-auto text-center mb-8">
+            <h2 class="text-2xl font-extrabold text-gunmetal">
+                Dipercaya oleh Brand Terkemuka
+            </h2>
+        </div> -->
+
+        <div class="overflow-hidden py-6 border-0 border-gray-200 logo-scroll-container">
+
+            <div class="logo-track flex items-center">
+                
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/arumi.png?raw=true' alt='Arumi' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/asahi.png?raw=true' alt='Asahi' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/bestfresh.png?raw=true' alt='bestfresh' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/chiko.png?raw=true' alt='chiko' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/dalle.png?raw=true' alt='dalle' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/fauziah.png?raw=true' alt='fauziah' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/mawar-merah.png?raw=true' alt='mawar-merah' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/persada.png?raw=true' alt='persada' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/arumi.png?raw=true' alt='Arumi' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/asahi.png?raw=true' alt='Asahi' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/bestfresh.png?raw=true' alt='bestfresh' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/chiko.png?raw=true' alt='chiko' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/dalle.png?raw=true' alt='dalle' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/fauziah.png?raw=true' alt='fauziah' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/mawar-merah.png?raw=true' alt='mawar-merah' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                <div class='inline-block mx-4 h-24 logo-item'><img src='https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/persada.png?raw=true' alt='persada' class='max-h-full w-auto filter grayscale opacity-60 transition duration-300 hover:grayscale-0 hover:opacity-100'></div>
+                                                                            
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="why-choose" class="py-20 px-4 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gunmetal text-center mb-12">
+                Mengapa Harus Memilih <span class="text-primary-gold">Tribun Consulting Group</span>?
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-xl border-t-4 border-primary-gold">
+                    <div class="text-6xl mb-4 text-center">
+                        <span class="text-primary-gold">🏆</span> </div>
+                    <h3 class="text-2xl font-extrabold text-gunmetal mb-4 text-center">
+                        Kredibilitas Lokal, Kualitas Terverifikasi
+                    </h3>
+                    <ul class="space-y-3 text-sm text-gunmetal">
+                        <li>
+                            <strong class="text-primary-gold block">Status Top 1 di Makassar:</strong> Kami memahami denyut nadi pasar lokal Anda, dari tren konsumen hingga bahasa komunikasi yang paling efektif.
+                        </li>
+                        <li>
+                            <strong class="text-primary-gold block">Keandalan Setara Korporasi:</strong> Kami menerapkan standar operasional, profesionalisme, dan transparansi yang setara dengan agensi digital skala nasional.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-xl border-t-4 border-primary-gold">
+                    <div class="text-6xl mb-4 text-center">
+                        <span class="text-primary-gold">⚙️</span> </div>
+                    <h3 class="text-2xl font-extrabold text-gunmetal mb-4 text-center">
+                        Solusi Holistik, Bukan Sekadar Posting Harian
+                    </h3>
+                    
+                    <ul class="space-y-3 text-sm text-gunmetal">
+                        <li>
+                            <strong class="text-primary-gold block">Dari Strategi hingga Eksekusi (A-Z):</strong> Kami mengintegrasikan Strategi Bisnis Digital, Produksi Konten Kreatif, dan Manajemen Iklan Efisien.
+                        </li>
+                        <li>
+                            <strong class="text-primary-gold block">Waktu Anda adalah Emas:</strong> Kami membebaskan waktu berharga Anda dan tim untuk fokus pada inovasi dan pengembangan produk/layanan inti.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-gray-50 rounded-lg shadow-xl border-t-4 border-primary-gold">
+                    <div class="text-6xl mb-4 text-center">
+                        <span class="text-primary-gold">📍</span> </div>
+                    <h3 class="text-2xl font-extrabold text-gunmetal mb-4 text-center">
+                        Sentuhan Lokal yang Relevan dan Up-to-Date
+                    </h3>
+                    
+                    <ul class="space-y-3 text-sm text-gunmetal">
+                        <li>
+                            <strong class="text-primary-gold block">Tren Lokal Cepat:</strong> Kami selalu mengikuti dan mengimplementasikan tren terbaru yang sedang viral dengan adaptasi budaya lokal yang cerdas.
+                        </li>
+                        <li>
+                            <strong class="text-primary-gold block">Copywriting yang Mengubah:</strong> Kami merancang caption yang persuasif, dirancang untuk memicu <strong>engagement</strong> dan, yang paling penting, <strong>konversi</strong>.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="layanan" class="py-16 px-4 bg-white text-center">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-gunmetal mb-12">
+            Kami Mengelola A-Z Social Media Anda
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            
+            <div class="p-8 border-t-4 border-primary-gold bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-primary-gold mb-4">💡</div>
+                <h3 class="text-2xl font-bold mb-3 text-gunmetal">Strategi Berbasis Data</h3>
+                <p class="text-slate-gray">Riset audiens, kompetitor, dan penetapan <strong>Tone of Voice</strong> brand untuk fondasi konten yang menghasilkan ROI.</p>
+            </div>
+
+            <div class="p-8 border-t-4 border-primary-gold bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-primary-gold mb-4">🎨</div>
+                <h3 class="text-2xl font-bold mb-3 text-gunmetal">Produksi Konten Premium</h3>
+                <p class="text-slate-gray">Desain visual, <strong>high-impact, copywriting</strong> persuasif, dan produksi <strong>Reels</strong> yang dioptimalkan untuk viralitas.</p>
+            </div>
+
+            <div class="p-8 border-t-4 border-primary-gold bg-white shadow-lg rounded-xl">
+                <div class="text-5xl text-primary-gold mb-4">📈</div>
+                <h3 class="text-2xl font-bold mb-3 text-gunmetal">Optimasi & Pelaporan</h3>
+                <p class="text-slate-gray">Manajemen Iklan Berbayar efektif, interaksi aktif, dan laporan bulanan transparan mengenai konversi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-20 px-4 bg-gray-100">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-gunmetal mb-4">
+                Apa Kata Mereka Tentang Kami?
+            </h2>
+            <p class="text-lg text-slate-gray mb-12">
+                Bukti nyata hasil kerja keras kami langsung dari klien-klien yang sudah merasakan pertumbuhan.
+            </p>
+
+            <div id="testimonial-carousel" class="relative w-full" data-carousel="slide" data-interval="8000">
+                
+                <div class="relative h-[420px] md:h-96 overflow-hidden rounded-lg">
+                    
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/arumi.png" alt="Logo Arumi Dental" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Sangat profesional. Setelah bergabung dengan Tribun, jadwal reservasi kami meningkat 40%. Kontennya sangat relevan dengan target pasar kami."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Drg. Rima</p>
+                                <p class="text-sm text-slate-gray">Arumi Dental</p>
+                            </div>
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/asahi.png" alt="Logo Asahi Klinik" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Pelayanan cepat dan admin sangat responsif. Tribun membantu kami mengedukasi pasien via Instagram dengan cara yang mudah dipahami. Hasilnya luar biasa."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Bapak Ahmad</p>
+                                <p class="text-sm text-slate-gray">Asahi Klinik dan Apotik</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/bestfresh.png" alt="Logo Bestfresh" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Penjualan online kami meningkat drastis setelah optimasi iklan dilakukan oleh Tribun. Budget iklan jadi lebih efisien dan terarah. Sangat direkomendasikan."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Ibu Dina</p>
+                                <p class="text-sm text-slate-gray">Bestfresh</p>
+                            </div>
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/chiko.png" alt="Logo Sanggar Chiko Manajemen" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Citra Sanggar kami jadi lebih modern dan profesional di sosial media. Pendaftaran member baru naik pesat berkat kampanye yang ditargetkan."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Chiko</p>
+                                <p class="text-sm text-slate-gray">Sanggar Chiko Manajemen</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/dalle.png" alt="Logo Dalle Laundry" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Sangat membantu dalam mengelola promosi musiman kami. Konten yang dibuat selalu tepat waktu dan menarik perhatian audiens di sekitar lokasi toko."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Pak Rahmat</p>
+                                <p class="text-sm text-slate-gray">Dalle Laundry</p>
+                            </div>
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/fauziah.png" alt="Logo Klinik Fauziah" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Tribun mengurus semua media sosial dan periklanan kami, memungkinkan tim medis kami fokus sepenuhnya pada pasien. Laporan kinerjanya sangat transparan."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Ibu Fauziah</p>
+                                <p class="text-sm text-slate-gray">Klinik Fauziah</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden duration-700 ease-in-out" data-carousel-item>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 p-4">
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/mawar-merah.png" alt="Logo Mawar Merah Cake" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Konten food photography yang sangat menggugah selera! Penjualan musiman, terutama saat hari raya, sukses besar berkat strategi pemasaran mereka."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Ibu Nia</p>
+                                <p class="text-sm text-slate-gray">Mawar Merah Cake</p>
+                            </div>
+                            
+                            <div class="p-6 bg-white rounded-xl shadow-lg flex flex-col items-start text-left hover:shadow-xl transition duration-300 h-full">
+                                <img src="https://raw.githubusercontent.com/mubarakabaz/tcg/refs/heads/development/layanan-pengelola-sosial-media/assets/client/persada.png" alt="Logo Persada Medical" class="h-16 mb-4  ">
+                                <div class="flex text-primary-gold mb-3 text-lg">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                                <blockquote class="text-gunmetal italic flex-grow">
+                                    "Kami mendapatkan pasien rujukan baru dari luar kota berkat iklan yang sangat terstruktur dan tertarget. Kualitas layanan setara agensi besar Jakarta."
+                                </blockquote>
+                                <p class="mt-4 font-bold text-gunmetal">Dr. Budi</p>
+                                <p class="text-sm text-slate-gray">Persada Medical</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="absolute z-30 flex -translate-x-1/2 bottom-0 left-1/2 space-x-3 rtl:space-x-reverse">
+                    <button type="button" class="w-3 h-3 rounded-full bg-gunmetal/50 hover:bg-primary-gold/70 transition duration-300" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gunmetal/50 hover:bg-primary-gold/70 transition duration-300" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gunmetal/50 hover:bg-primary-gold/70 transition duration-300" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+                    <button type="button" class="w-3 h-3 rounded-full bg-gunmetal/50 hover:bg-primary-gold/70 transition duration-300" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+                </div>
+
+                <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gunmetal/30 group-hover:bg-primary-gold/50 group-focus:ring-4 group-focus:ring-gunmetal/70 transition duration-300">
+                        <i class="fas fa-chevron-left text-white"></i>
+                    </span>
+                </button>
+                <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+                    <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gunmetal/30 group-hover:bg-primary-gold/50 group-focus:ring-4 group-focus:ring-gunmetal/70 transition duration-300">
+                        <i class="fas fa-chevron-right text-white"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section id="harga" class="py-20 px-4 bg-gunmetal text-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-12 text-primary-gold">
+                Pilih Paket Yang Tepat Untuk Bisnis Anda
+            </h2>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
+                
+                <div class="p-8 bg-white text-gunmetal rounded-xl shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary-gold mb-4">PAKET STRATEGIS</h3>
+                        <p class="text-4xl font-extrabold mb-6">Rp. 3 Juta<span class="text-xl font-normal text-slate-gray">/bulan</span></p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3">12 Konten Feed/Bulan</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Riset Hashtag & Caption Profesional</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Laporan Kinerja Bulanan</span></li>
+                            <li class="flex items-center">❌ <span class="ml-3 text-red-500">Tanpa Iklan Berbayar</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20dengan%20Paket%20Strategis%20Tribun%20Consulting%20Group" 
+                       target="_blank" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Paket Strategis', value: 3000000, currency: 'IDR'});"
+                       class="mt-4 bg-gunmetal hover:bg-slate-gray text-white font-bold py-3 rounded-lg transition duration-300 text-center">
+                        Pilih Paket Ini
+                    </a>
+                </div>
+
+                <div class="p-10 bg-primary-gold text-gunmetal rounded-xl shadow-2xl ring-4 ring-white flex flex-col justify-between transform scale-105">
+                    <div>
+                        <div class="text-sm font-bold bg-gunmetal text-white py-1 px-3 rounded-full inline-block mb-3">Paling Populer</div>
+                        <h3 class="text-3xl font-extrabold mb-4">PAKET JUARA</h3>
+                        <p class="text-5xl font-extrabold mb-6">Rp. 5 Juta<span class="text-xl font-normal">/bulan</span></p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">20 Konten Feed/Reels/Bulan</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Strategi & Desain Premium</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Manajemen Iklan Berbayar *</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3 font-semibold">Fast Response Admin</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20tertarik%20dengan%20Paket%20Juara%20Tribun%20Consulting%20Group" 
+                       target="_blank" onclick="fbq('track', 'InitiateCheckout', {content_name: 'Paket Juara', value: 5000000, currency: 'IDR'});"
+                       class="mt-4 bg-gunmetal hover:bg-slate-gray text-white font-bold py-4 rounded-lg transition duration-300 text-center">
+                        Ambil Paket Juara
+                    </a>
+                </div>
+
+                <div class="p-8 bg-white text-gunmetal rounded-xl shadow-2xl flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-primary-gold mb-4">PAKET KORPORAT</h3>
+                        <p class="text-4xl font-extrabold mb-6">Konsultasi Harga</p>
+                        <ul class="text-left space-y-3 mb-8 text-lg">
+                            <li class="flex items-center">✅ <span class="ml-3">Custom Konten Tak Terbatas</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Dedicated Account Manager</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Pelatihan Tim Internal Klien</span></li>
+                            <li class="flex items-center">✅ <span class="ml-3">Prioritas Optimasi & Riset</span></li>
+                        </ul>
+                    </div>
+                    <a href="https://wa.me/6285346098979?text=Saya%20membutuhkan%20Paket%20Korporat%20Tribun%20Consulting%20Group" 
+                       target="_blank" 
+                       class="mt-4 bg-gunmetal hover:bg-slate-gray text-white font-bold py-3 rounded-lg transition duration-300 text-center">
+                        Minta Kustomisasi
+                    </a>
+                </div>
+            </div>
+            <p class="mt-8 text-sm text-white/80">*Harga belum termasuk budget iklan berbayar.</p>
+        </div>
+    </section>
+
+    <section id="kontak" class="py-16 px-4 bg-gray-100 text-center">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4 text-gunmetal">
+                Siap Mendominasi Pasar Digital Makassar?
+            </h2>
+            <p class="text-xl mb-10 text-primary-gold">
+                Jangan biarkan kompetitor Anda mengambil pangsa pasar Anda.
+            </p>
+            
+            <a href="https://wa.me/6285346098979" 
+            target="_blank" 
+            class="inline-block bg-primary-gold hover:bg-secondary-gold text-gunmetal text-2xl font-bold py-4 px-12 rounded-lg shadow-xl transition duration-300 transform hover:scale-105">
+                Jadwalkan Konsultasi!
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-gunmetal py-10 md:py-12 px-4 border-t-4 border-primary-gold">
+        <div class="max-w-6xl mx-auto text-center">
+            
+            <h4 class="text-3xl font-extrabold text-primary-gold mb-3">
+                Tribun Consulting Group
+            </h4>
+            <p class="text-slate-gray mb-8 text-sm">
+                Mitra Pertumbuhan Digital Bisnis #1 di Makassar
+            </p>
+
+            <div class="flex justify-center space-x-6 mb-10">
+                
+                <a href="https://www.instagram.com/tribunconsultinggrup/" 
+                target="_blank" 
+                aria-label="Instagram Tribun Consulting Group"
+                class="text-primary-gold hover:text-white transition duration-300 text-3xl transform hover:scale-110">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://wa.me/6285346098979" 
+                target="_blank" 
+                aria-label="WhatsApp Tribun Consulting Group"
+                class="text-primary-gold hover:text-white transition duration-300 text-3xl transform hover:scale-110">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <a href="https://www.facebook.com/profile.php?id=61551588584577" 
+                target="_blank" 
+                aria-label="Facebook Tribun Consulting Group"
+                class="text-primary-gold hover:text-white transition duration-300 text-3xl transform hover:scale-110">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="mailto:tribunconsultinggroup@gmail.com" 
+                aria-label="Email Tribun Consulting Group"
+                class="text-primary-gold hover:text-white transition duration-300 text-3xl transform hover:scale-110">
+                    <i class="fas fa-envelope"></i>
+                </a>
+
+            </div>
+
+            <p class="text-sm text-slate-gray mt-4">
+                &copy; <span id="current-year">2025</span> Tribun Consulting Group. All Rights Reserved.
+            </p>
+            
+            <script>
+                var _0x39bf52=_0x26ae;(function(_0x1242be,_0xf585e3){var _0xf76543=_0x26ae,_0x3a9c07=_0x1242be();while(!![]){try{var _0x4327aa=parseInt(_0xf76543(0x124))/0x1*(-parseInt(_0xf76543(0x123))/0x2)+-parseInt(_0xf76543(0x121))/0x3+parseInt(_0xf76543(0x129))/0x4+-parseInt(_0xf76543(0x120))/0x5*(parseInt(_0xf76543(0x127))/0x6)+-parseInt(_0xf76543(0x125))/0x7*(-parseInt(_0xf76543(0x128))/0x8)+parseInt(_0xf76543(0x12a))/0x9+parseInt(_0xf76543(0x122))/0xa;if(_0x4327aa===_0xf585e3)break;else _0x3a9c07['push'](_0x3a9c07['shift']());}catch(_0x5db371){_0x3a9c07['push'](_0x3a9c07['shift']());}}}(_0x53c0,0x8a235),document[_0x39bf52(0x126)]('current-year')['textContent']=new Date()['getFullYear']());function _0x26ae(_0x13d505,_0x3cfb33){var _0x53c065=_0x53c0();return _0x26ae=function(_0x26aec0,_0xfd06b7){_0x26aec0=_0x26aec0-0x120;var _0x22b525=_0x53c065[_0x26aec0];return _0x22b525;},_0x26ae(_0x13d505,_0x3cfb33);}function _0x53c0(){var _0x546461=['5174309DjjshB','getElementById','804516bTLuTu','8lkPihs','224164PkAFYp','2012319WACWxx','20BdLgNf','2965089rdXrrq','20378340CgTVun','98fSKmJa','19717eYGNRR'];_0x53c0=function(){return _0x546461;};return _0x53c0();}
+            </script>
+
+        </div>
+    </footer>
+
+</body>
+</html>
