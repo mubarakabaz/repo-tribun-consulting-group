@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Website dengan Batas Waktu</title>
+</head>
+<body>
+
+    <script>
+    // --- Pengaturan Waktu Target ---
+    // Target: 28 Oktober 2025 Pukul 13:00:00.
+    // Catatan: Karena waktu saat ini adalah 12:56:10 WITA (28 Okt 2025), sisa waktu sekitar 3 menit 50 detik.
+
+    // Menggunakan format yang mencakup zona waktu untuk akurasi yang lebih baik.
+    // WITA adalah UTC+8. Waktu target 13:00 WITA = 05:00 UTC.
+    const WAKTU_TARGET_STRING_WITA = "October 28, 2025 13:00:00 GMT+08:00"; 
+    const WAKTU_TARGET_MS = new Date(WAKTU_TARGET_STRING_WITA).getTime();
+
+    // --- Fungsi Utama Penonaktifan ---
+
+    function nonaktifkanTampilanWebsite() {
+        // 1. Buat elemen overlay
+        const overlay = document.createElement('div');
+        overlay.id = 'error-overlay';
+
+        // 2. Tentukan gaya (style) untuk overlay
+        overlay.style.cssText = `
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #007bff; /* Biru terang */
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            z-index: 9999; 
+            font-family: Arial, sans-serif;
+        `;
+
+        // 3. Buat elemen teks error
+        const errorText = document.createElement('h1');
+        errorText.textContent = 'WEBSITE OFFLINE';
+        errorText.style.fontSize = '5vw'; 
+        errorText.style.margin = '0';
+
+        const subText = document.createElement('p');
+        subText.textContent = 'Halaman ini telah dinonaktifkan tepat pukul 13:00 WITA pada 28 Oktober 2025.';
+        subText.style.fontSize = '2vw';
+
+        // 4. Masukkan teks ke dalam overlay
+        overlay.appendChild(errorText);
+        overlay.appendChild(subText);
+        document.body.appendChild(overlay);
+
+        // 5. Pastikan body tidak bisa berinteraksi/di-scroll
+        document.body.style.margin = '0';
+        document.body.style.overflow = 'hidden';
+    }
+
+    // --- Logika Penentuan Waktu ---
+
+    function periksaDanJadwalkan() {
+        const waktuSaatIni = new Date().getTime();
+
+        if (waktuSaatIni >= WAKTU_TARGET_MS) {
+            // 1. Jika waktu target sudah terlewati (atau tepat waktu), langsung tampilkan error
+            console.log("Waktu target 13:00 WITA telah terlewati. Menampilkan layar offline.");
+            nonaktifkanTampilanWebsite();
+        } else {
+            // 2. Jika waktu belum terlewati, hitung sisa waktu dan jadwalkan
+            const sisaWaktu = WAKTU_TARGET_MS - waktuSaatIni;
+            const sisaMenit = Math.ceil(sisaWaktu / 1000 / 60);
+            
+            console.log(`Website akan offline dalam kurang dari ${sisaMenit} menit.`);
+            
+            // Jadwalkan fungsi penonaktifan
+            setTimeout(nonaktifkanTampilanWebsite, sisaWaktu);
+        }
+    }
+
+    // Jalankan pemeriksaan saat halaman dimuat
+    periksaDanJadwalkan();
+    </script>
+</body>
+</html>
