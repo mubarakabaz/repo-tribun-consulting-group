@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Penunjuk Tombol</title>
+    <style>
+/* Definisi Animasi Keyframes */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        /* Kembali ke posisi awal atau posisi akhir */
+        transform: translateY(0);
+    }
+    40% {
+        /* Puncak pantulan (misalnya bergerak 15px ke atas) */
+        transform: translateY(-15px);
+    }
+    60% {
+        /* Pantulan yang lebih kecil */
+        transform: translateY(-7px);
+    }
+}
+
+/* Terapkan Animasi pada Elemen */
+.bounce-arrow {
+    /* Menerapkan animasi: nama, durasi, fungsi waktu, iterasi */
+    animation: bounce 2s infinite; /* 2 detik durasi, berulang terus-menerus */
+    /* Pastikan transform bisa digunakan. */
+    /* Karena panah Anda sudah memiliki style 'transform' */
+    /* pada elemen induknya, kita harus menentukan 'transform' pada elemen yang berbeda */
+}
+
+/* BERDASARKAN KODE ANDA, PANAH ANDA SUDAH MENGGUNAKAN 'transform: translateY(29.8513px);' */
+/* Jadi, kita harus menerapkan animasi ke elemen yang berisi SVG, yang merupakan elemen dengan kelas 'arrow-container' di dalamnya */
+
+/* Coba terapkan pada div yang memiliki style transform: translateY(29.8513px); */
+.bounce-arrow > div {
+    animation: bounce 2s infinite;
+}
+
+/* Sesuaikan keyframes agar bergerak dari posisi aslinya (29.8513px) */
+/* Kita akan menggunakan properti 'top' alih-alih 'transform' pada elemen induk untuk menghindari konflik, */
+/* atau menggerakkan elemen dalam relatif terhadap elemen induk. */
+
+/* KODE KEYFRAMES YANG LEBIH BAIK UNTUK KASUS INI */
+@keyframes bounce-relative {
+    0%, 20%, 50%, 80%, 100% {
+        /* Posisi awal (relative terhadap 29.8513px) */
+        transform: translateY(0);
+    }
+    40% {
+        /* Pantulan ke atas (misalnya -15px dari posisi saat ini) */
+        transform: translateY(-15px);
+    }
+    60% {
+        /* Pantulan ke atas yang lebih kecil */
+        transform: translateY(-7px);
+    }
+}
+
+/* Terapkan ke elemen yang berisi SVG */
+/* Saya akan memilih panah tengah untuk contoh ini */
+.arrow-container > div:nth-child(3) > div {
+    /* nth-child(3) adalah panah yang tidak diputar */
+    animation: bounce-relative 1.5s infinite; /* Durasi lebih cepat, berulang */
+}
+
+/* Jika Anda ingin ketiga panah memantul: */
+/*
+.arrow-container > div > div > div {
+    animation: bounce-relative 1.5s infinite;
+}
+*/
+</style>
+</head>
+<body>
+
+    <section>
+        <div class="arrow-container ">
+            <div style="padding-bottom:6px" class="bgw arrow-container ">
+                <div style="pointer-events:none;align-items:center;height:463.37142857142857px;overflow:hidden;padding-top:154.45714285714286px;margin-top:-154.45714285714286px;margin-bottom:-154.45714285714286px" class="arrow-container ">
+                    <div class="arrow-container ">
+                        <div style="width:68px;position:absolute;top:0;left:-34px;transform:rotate(11deg)translateX(120px)translateY(0px)scaleX(-1);-webkit-transform:rotate(11deg)translateX(120px)translateY(0px)scaleX(-1)" class="arrow-container ">
+                            <div style="transform: translateY(29.8513px);" class="arrow-container ">
+                                <svg viewBox="-3 -1.5 70 104.5">
+                                    <path d="M0,76 L23,76 L23,0 L41,0 L41,76 L64,76 L32,100 L0,76 L23,76" style="stroke:black;fill:red;stroke-width:3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="width:68px;position:absolute;top:0;left:-34px;transform:rotate(-11deg)translateX(-120px)translateY(0px);-webkit-transform:rotate(-11deg)translateX(-120px)translateY(0px)" class="arrow-container ">
+                            <div style="transform: translateY(29.8513px);" class="arrow-container ">
+                                <svg viewBox="-3 -1.5 70 104.5"><path d="M0,76 L23,76 L23,0 L41,0 L41,76 L64,76 L32,100 L0,76 L23,76" style="stroke:black;fill:red;stroke-width:3"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div style="width:68px;position:absolute;top:0;left:-34px" class="arrow-container "><div style="transform: translateY(29.8513px);" class="arrow-container ">
+                            <svg viewBox="-3 -1.5 70 104.5"><path d="M0,76 L23,76 L23,0 L41,0 L41,76 L64,76 L32,100 L0,76 L23,76" style="stroke:black;fill:red;stroke-width:3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+    </section>
+    
+</body>
+</html>
