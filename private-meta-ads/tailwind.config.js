@@ -22,6 +22,9 @@ module.exports = {
         'secondary-gojek': '#00AA13',
         'primary-maroon: ':'#780009',
         'primary-red: ':'#F10000',
+        'fb: ':'#1778F2',
+        'gunmetal: ':'#1B2D32',
+
       },
       
       // Tambahkan ekstensi tema lain di sini jika diperlukan (misalnya font, spacing)

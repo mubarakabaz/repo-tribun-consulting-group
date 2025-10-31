@@ -1,120 +1,277 @@
-body {
-    font-family: 'Poppins', sans-serif;
+/* ========================================= */
+/* 📱 Gaya Ponsel (Kustom di bawah 640px)   */
+/* ========================================= */
+
+/* Menerapkan gaya ini HANYA saat lebar layar maksimal 639px (Ponsel Kecil) */
+@media (max-width: 639px) {
+    
+    .stats-vertical {
+        /* Jika ingin stat selalu vertikal di layar sangat kecil */
+        flex-direction: column; 
+    }
+    
+    /* Penyesuaian untuk Tombol Aksi di Hero Section */
+    .hero-content .btn {
+        /* Mengganti btn-lg bawaan DaisyUI dengan ukuran kustom yang lebih kecil */
+        font-size: 1rem; /* Ukuran font lebih kecil */
+        padding: 0.75rem 1.5rem; /* Padding lebih kecil (menggantikan btn-lg) */
+        height: auto; /* Memastikan tinggi menyesuaikan konten */
+        line-height: 1.25; /* Mengatur jarak baris untuk teks 2 baris */
+    }
+
+    .hero-content .btn svg {
+        /* Ukuran ikon WhatsApp */
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; 
+    }
 }
 
-/* Customize font family Poppins */
+/* ========================================= */
+/* 🔍 Gaya Ponsel Ultra Kecil (max-width: 360px) */
+/* ========================================= */
 
-.poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
+@media (max-width: 360px) {
 
-.poppins-extralight {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: normal;
-}
+  /* Target section hero: py-24 di hero section */
+    .hero.py-24 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    /* Mengurangi Ukuran Heading H1 */
+    .hero-content h1 {
+        /* H1 sudah diatur 2.5rem di 639px, dikurangi lagi di 360px */
+        font-size: 2rem !important; 
+        line-height: 1.2;
+    }
+    
+    /* Mengurangi Ukuran Tagline/Subteks */
+    .hero-content p.text-xl {
+        /* Mengurangi ukuran font dari text-xl */
+        font-size: 1rem !important; 
+    }
+    
+    /* Penyesuaian Margin Bawah pada Tombol */
+    .hero-content .mt-6 {
+        margin-top: 1rem !important; /* Mengurangi jarak atas tombol */
+    }
 
-.poppins-light {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: normal;
-}
+    /* --- Penyesuaian Section Keahlian (py-16 bg-slate-100) --- */
+    
+    /* 1. Mengurangi Ukuran Heading H2 */
+    .py-16.bg-slate-100 h2 {
+        /* Dari 4xl, dikecilkan menjadi sekitar 2xl */
+        font-size: 1.75rem !important; 
+        line-height: 1.3;
+        margin-bottom: 0.75rem !important; /* Mengurangi jarak bawah */
+    }
+    /* --- Penyesuaian Section "Ideal Untuk" (py-20) --- */
 
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
+    /* Mengurangi Padding Section */
+    .py-20 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
 
-.poppins-medium {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: normal;
-}
+    /* 1. Mengurangi Ukuran Heading H2 (dari text-4xl) */
+    .py-20 h2 {
+        font-size: 1.75rem !important; /* Dikecilkan menjadi sekitar 2xl */
+        margin-bottom: 0.5rem !important;
+        line-height: 1.3;
+    }
 
-.poppins-semibold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-}
+    /* 2. Mengurangi Ukuran Tagline P (dari text-lg) */
+    .py-20 p.mb-12 {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+    }
 
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
+    /* 3. Penyesuaian Kartu (Cards) */
+    .py-20 .card-body.p-8 {
+        padding: 1.25rem !important; /* Mengurangi padding card dari p-8 */
+    }
+    
+    /* 4. Mengurangi Ukuran Icon/Emoji (dari text-5xl) */
+    .py-20 .card-body .text-5xl {
+        font-size: 2.5rem !important;
+    }
 
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
+    /* 5. Mengurangi Ukuran Card Title H3 (dari text-2xl) */
+    .py-20 .card-body h3 {
+        font-size: 1.25rem !important;
+        line-height: 1.2;
+    }
 
-.poppins-black {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
+    /* 6. Mengurangi Ukuran Teks List Item */
+    .py-20 .card-body ul {
+        /* Mereduksi ukuran teks list item */
+        font-size: 0.9rem !important; 
+    }
+    
+    /* Menghapus efek hover scale agar tidak mengganggu di touch screen */
+    .py-20 .card {
+        transform: scale(1) !important;
+    }
+    /* --- Penyesuaian Section Modul (py-20 bg-slate-200) --- */
 
-.poppins-thin-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
+    /* Mengurangi Padding Section */
+    .py-20.bg-slate-200 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
 
-.poppins-extralight-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  font-style: italic;
-}
+    /* 1. Mengurangi Ukuran Heading H2 (dari text-4xl) */
+    .py-20.bg-slate-200 h2 {
+        font-size: 1.75rem !important; /* Dikecilkan menjadi sekitar 2xl */
+        margin-bottom: 0.5rem !important;
+        line-height: 1.2;
+    }
 
-.poppins-light-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
+    /* 2. Mengurangi Ukuran Tagline P (dari text-lg) */
+    .py-20.bg-slate-200 p.mb-12 {
+        font-size: 0.9rem !important;
+        margin-bottom: 1rem !important;
+    }
 
-.poppins-regular-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
+    /* 3. Mengurangi Ukuran Collapse Title (dari text-xl) */
+    .py-20.bg-slate-200 .collapse-title {
+        font-size: 1rem !important; /* Judul modul dikecilkan */
+        padding: 1rem 1.5rem !important; /* Menyesuaikan padding */
+        min-height: auto !important; /* Memastikan tinggi menyesuaikan konten */
+    }
 
-.poppins-medium-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-style: italic;
-}
+    /* 4. Mengurangi Ukuran Teks di Dalam Konten Modul */
+    .py-20.bg-slate-200 .collapse-content {
+        padding: 1rem !important; /* Mengurangi padding konten */
+    }
+    .py-20.bg-slate-200 .collapse-content ul {
+        font-size: 0.9rem !important; /* Teks list item dikecilkan */
+        padding-left: 1.5rem !important;
+    }
+    /* 2. Penyesuaian Kartu (Cards) */
+    .py-16.bg-slate-100 .card {
+        padding: 1rem !important; /* Mengurangi padding kartu */
+    }
 
-.poppins-semibold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-style: italic;
-}
+    /* 3. Mengurangi Ukuran Card Title */
+    .py-16.bg-slate-100 .card-title {
+        /* Dari 2xl, dikecilkan menjadi sekitar 1.5rem (xl) */
+        font-size: 1.25rem !important; 
+        margin-bottom: 0.5rem; /* Jarak antara judul dan paragraf */
+    }
 
-.poppins-bold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
+    /* 4. Mengurangi Ukuran Paragraf di Card */
+    .py-16.bg-slate-100 .card-body p {
+        font-size: 0.9rem !important; /* Teks penjelasan di kartu dikecilkan */
+    }
+    
+    /* Mengurangi padding section secara keseluruhan */
+    .py-16.bg-slate-100 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
+    
+    /* --- Penyesuaian Umum Card Penawaran Harga --- */
+    
+    /* Target card penawaran spesial */
+    .py-20.bg-base-200 .lg\:scale-\[1\.05\] {
+        /* Memastikan card ini tidak terdistorsi di layar sangat kecil */
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        transform: scale(1) !important; /* Menghapus efek scale bawaan lg:scale-[1.05] */
+    }
 
-.poppins-extrabold-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: italic;
-}
+    /* --- Penyesuaian Harga --- */
+    
+    /* Target Harga Coret (Rp 3.500.000) */
+    .py-20.bg-base-200 .line-through {
+        font-size: 1rem !important; /* Mengurangi ukuran font harga coret */
+    }
 
-.poppins-black-italic {
-  font-family: "Poppins", sans-serif;
-  font-weight: 900;
-  font-style: italic;
-}
-/* End costumize font family Poppins */
+    /* Target Harga Diskon (Rp 1.900.000) */
+    .py-20.bg-base-200 .text-5xl {
+        font-size: 2.5rem !important; /* Mengurangi ukuran font yang sangat besar (5xl -> 2.5rem) */
+        line-height: 1.2;
+    }
+    
+    .py-20.bg-base-200 .my-6 {
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* --- Penyesuaian Tombol --- */
+    
+    /* Tombol Aksi - Penyesuaian Lebih Lanjut untuk Layar Sangat Kecil (Mengatasi text-xl/btn-lg) */
+    .py-20.bg-base-200 .btn-lg {
+        font-size: 1rem !important; /* Mengurangi ukuran font tombol */
+        padding: 0.75rem 1rem !important; /* Mengurangi padding vertikal dan horizontal */
+        height: auto;
+        line-height: 1.25; /* Mengatur jarak baris untuk teks 2 baris */
+    }
 
-#testimoni-carousel {
-    overscroll-behavior: contain;
-    /* atau lebih spesifik: */
-    overscroll-behavior-y: contain;
+    /* Ukuran ikon WhatsApp di dalam tombol */
+    .py-20.bg-base-200 .btn-lg svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    /* --- Penyesuaian Section Stats --- */
+    
+    /* 1. Mengurangi Ukuran Heading H2 */
+    .container.mx-auto.px-4 h2 {
+        font-size: 1.75rem !important; /* Dari 3xl, dikecilkan menjadi sekitar 2xl */
+        margin-bottom: 0.5rem !important; /* Mengurangi jarak bawah */
+    }
+
+    /* --- Penyesuaian Harga pada Special Offer Card --- */
+
+    /* Menargetkan div yang membungkus harga */
+    /* Beri id/class unik jika memungkinkan, atau target melalui struktur */
+    .py-20.bg-base-200 .card-body .my-6 {
+        /* Memastikan teks di dalam div ini rata tengah */
+        text-align: center !important; 
+        /* Pastikan elemen div ini mengambil lebar penuh yang tersedia */
+        width: 100% !important; 
+        /* Atur margin horizontal menjadi auto agar berada di tengah container */
+        margin-left: auto !important; 
+        margin-right: auto !important;
+    }
+    
+    /* Optional: Mengurangi ukuran font agar tidak terpotong */
+    .py-20.bg-base-200 .card-body #price-special {
+        font-size: 3rem !important; /* Dikecilkan dari 5xl (3rem = text-4xl) */
+    }
+    
+    .py-20.bg-base-200 .card-body .line-through {
+        font-size: 0.9rem !important; /* Dikecilkan dari text-xl */
+    }
+    
+    /* 2. Mengurangi Ukuran Paragraph */
+    .container.mx-auto.px-4 p {
+        font-size: 0.9rem !important; /* Mengurangi ukuran teks agar lebih ringkas */
+        margin-bottom: 1rem !important;
+    }
+
+    /* 3. Penyesuaian Konten STATS */
+    .stats.stats-vertical .stat-title {
+        font-size: 0.9rem !important; /* Judul stat dikecilkan (dari 2xl) */
+    }
+
+    .stats.stats-vertical .stat-value {
+        font-size: 2.5rem !important; /* Nilai stat dikecilkan (dari 5xl) */
+    }
+    
+    .stats.stats-vertical .stat-desc {
+        font-size: 0.8rem !important; /* Deskripsi stat dikecilkan (dari lg) */
+    }
+
+    /* Mengurangi padding section secara keseluruhan */
+    .py-16.bg-base {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+    }
 }
