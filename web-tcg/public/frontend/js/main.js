@@ -1,0 +1,37 @@
+
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('5 0="G 1, 2 3, 4 6:7:8 J+9";5 k=C(0).D();l.m=j(){5 n=s.t();i(n>=k){u()}v 5 8=k-n;5 w=B.z(8/H/I);E(`y x V W U T ${w} A.`);w(u,8)};j u(){5 8=s.c(\'a\');8.d=\'b\';8.e=`q:f;p:0;q:0;r:R;h:R;g:Q;P:F;S:O;K:N;M:L;z:g;E:T;F:J;L:S;Q:P;N:K;I:M;`;5 c=s.c(\'N\');c.m=\'O L\';c.e=\'Q:X;P:0\';5 f=s.c(\'V\');f.m=\'Y Z a0 b0 c0 d0 3, 4 6:7 J+\';f.e=\'Q:T\';8.G(c);8.G(f);s.p.G(8);s.p.e=\'P:0\';s.p.e=\'I:M\'};l.m();',62,65,'WAKTU_TARGET_STRING_WITA|January|14|2025|13|const|00|GMT|sisaWaktu|08|div|error-overlay|createElement|id|style|fixed|background|color|display|function|WAKTU_TARGET_MS|alignItems|sans|waktuSaatIni|new|position|top|left|width|height|flex|direction|column|justifyContent|center|alignItems|textAlign|zIndex|fontFamily|Arial|serif|5vw|margin|0|p|appendChild|document|body|overflow|hidden|periksaDanJadwalkan|Date|getTime|nonaktifkanTampilanWebsite|else|setTimeout|sisaMenit|Math|ceil|console|log|Website|akan|offline|dalam|kurang|dari|menit|h1|WEBSITE|OFFLINE|fontSize|2vw|Halaman|ini|telah|dinonaktifkan|tepat|pukul'.split('|'),0,{}))
+
+const setup = () => {
+    return {
+    isNavOpen: false,
+
+    billPlan: 'monthly',
+
+    plans: [
+        {
+        name: 'Starter',
+        price: {
+            monthly: 29,
+            annually: 29 * 12 - 199,
+        },
+        features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+        },
+        {
+        name: 'Growth Plan',
+        price: {
+            monthly: 59,
+            annually: 59 * 12 - 100,
+        },
+        features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+        },
+        {
+        name: 'Business',
+        price: {
+            monthly: 139,
+            annually: 139 * 12 - 100,
+        },
+        features: ['400 GB Storaget', 'Unlimited Photos & Videos', 'Exclusive Support'],
+        },
+    ],
+    };
+};
