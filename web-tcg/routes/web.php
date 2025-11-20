@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [FrontController::class, 'index'])->name('index');
+Route::get('about', [FrontController::class, 'about'])->name('about');
 
 Route::post('/subscribe', [FrontController::class, 'subscribeStore'])->name('subscribe');

@@ -11,6 +11,10 @@ class FrontController extends Controller {
         return view('frontend.main');
     }
 
+    public function about(){
+        return view('frontend.contents.about');
+    }
+
     public function subscribeStore(Request $request){
         // 1. Validasi input
         $validator = Validator::make($request->all(),[
