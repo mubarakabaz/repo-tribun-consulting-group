@@ -1,14 +1,7 @@
 @extends('frontend.layouts.app')
 
 @section('title')
-    Jasa Pembuatan Website, Landing Page, SEO Bergaransi | Tribun Consulting Group
-@endsection
-
-@section('meta')
-    <meta name="description"
-        content="Tribun Consulting Group menyediakan Digital Marketing di Makassar dan seluruh Indonesia, training, workshop, dan strategi paid traffic, jasa pembuatan website profesional, landing page menarik, dan layanan SEO bergaransi untuk meningkatkan visibilitas bisnis Anda secara online.">
-    <meta name="keywords"
-        content="jasa pembuatan website, jasa landing page, jasa SEO bergaransi, pembuatan website profesional, layanan SEO, optimasi mesin pencari, desain website menarik, Tribun Consulting Group">
+    Layanan Digital Marketing Makassar Jasa Pembuatan Website, SEO Bergaransi | Tribun Consulting Group
 @endsection
 
 @section('content')
