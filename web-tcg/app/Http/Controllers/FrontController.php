@@ -15,6 +15,42 @@ class FrontController extends Controller {
         return view('frontend.contents.about');
     }
 
+    public function pelatihan(){
+        return view('frontend.contents.pelatihan');
+    }
+
+    public function kontak(){
+        return view('frontend.contents.kontak');
+    }
+
+    public function artikel(){
+        return view('frontend.contents.services.blog-grid');
+    }
+
+    public function servicesSeo(){
+        return view('frontend.contents.services.seo');
+    }
+
+    // public function servicesSosmed(){
+    //     return view('frontend.contents.blog.sosmed');
+    // }
+
+    public function servicesWeb(){
+        return view('frontend.contents.services.website');
+    }
+
+    public function servicesAds(){
+        return view('frontend.contents.services.ads');
+    }
+
+    public function servicesContentMarketing(){
+        return view('frontend.contents.services.content-marketing');
+    }
+
+    public function servicesVisualBranding(){
+        return view('frontend.contents.services.visual-branding');
+    }
+
     public function subscribeStore(Request $request){
         // 1. Validasi input
         $validator = Validator::make($request->all(),[
