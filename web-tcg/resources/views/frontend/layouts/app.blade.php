@@ -7,7 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> @yield('title') </title>
 
-    @yield('meta')
+    <meta name="description"
+        content="Tribun Consulting Group menyediakan Digital Marketing di Makassar dan seluruh Indonesia, training, workshop, dan strategi paid traffic, jasa pembuatan website profesional, landing page menarik, dan layanan SEO bergaransi untuk meningkatkan visibilitas bisnis Anda secara online.">
+    <meta name="keywords"
+        content="Tribun Consulting Group, Digital Marketing Makassar, konsultan digital marketing, strategi digital,Jasa pembuatan website, jasa pembuatan website makassar, SEO Makassar, SMM, iklan digital, jasa digital marketing, UMKM, Startup, agensi digital marketing">
 
     <meta name="authors" content="Abdul Aziz Mubarak, Mubarakabaz">
 
@@ -73,9 +76,9 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                         <li><a href="{{ route('about') }}" class="xl">Tentang Kami</a></li>
                         <li class="c i" x-data="{ dropdown: false }">
                             <a href="#!" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown"
-                                :class="{ 'mk': page === 'blog-grid' || page === 'blog-single' || page === 'signin' ||
-                                        page === 'signup' || page === '404' }">
-                                Pages
+                                :class="{ 'mk': page === 'seo-bergaransi' || page === 'pembuatan-website' || page === 'manajemen-sosial-media' ||
+                                        page === 'content-marketing' || page === 'jasa-iklan-digital-marketing' || page === 'visual-branding' }">
+                                Layanan
 
                                 <svg :class="{ 'wh': dropdown }" class="th mm we fd pf"
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -86,20 +89,24 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
 
                             <!-- Dropdown Start -->
                             <ul class="a" :class="{ 'tc': dropdown }">
-                                <li><a href="blog-grid.html" class="xl"
-                                        :class="{ 'mk': page === 'blog-grid' }">Blog Grid</a></li>
-                                <li><a href="blog-single.html" class="xl"
-                                        :class="{ 'mk': page === 'blog-single' }">Blog Single</a></li>
-                                <li><a href="signin.html" class="xl" :class="{ 'mk': page === 'signin' }">Sign
-                                        In</a></li>
-                                <li><a href="signup.html" class="xl" :class="{ 'mk': page === 'signup' }">Sign
-                                        Up</a></li>
-                                <li><a href="404.html" class="xl" :class="{ 'mk': page === '404' }">404</a>
+                                <li><a href="{{ route('seo') }}" class="xl" :class="{ 'mk': page === 'seo-bergaransi' }">SEO Bergaransi</a>
+                                </li>
+                                <li><a href="{{ route('website') }}" class="xl" :class="{ 'mk': page === 'pembuatan-website' }">Pembuatan Website</a>
+                                </li>
+                                <li><a href="https://sosmed.tribunconsultinggroup.id/" class="xl" :class="{ 'mk': page === 'manajemen-sosial-media' }">Manajemen Sosial Media</a>
+                                </li>
+                                <li><a href="{{ route('content-marketing') }}" class="xl" :class="{ 'mk': page === 'content-marketing' }">Content Marketing</a>
+                                </li>
+                                <li><a href="{{ route('ads') }}" class="xl" :class="{ 'mk': page === 'jasa-iklan-digital-marketing' }">Jasa Iklan Digital Marketing</a>
+                                </li>
+                                <li><a href="{{ route('visual-branding') }}" class="xl" :class="{ 'mk': page === 'visual-branding' }">Desain Visual &amp; Digital Branding</a>
                                 </li>
                             </ul>
                             <!-- Dropdown End -->
                         </li>
-                        <li><a href="index.html#support" class="xl">Support</a></li>
+                        <li><a href="{{ route('pelatihan') }}" class="xl">Pelatihan</a></li>
+                        <li><a href="{{ route('artikel') }}" class="xl">Artikel</a></li>
+                        <li><a href="{{ route('kontak') }}" class="xl">Kontak</a></li>
                     </ul>
                 </nav>
 
@@ -354,6 +361,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
     </button>
 
     <!-- ====== Back To Top End ===== -->
+    @yield('script')
 
     <script defer src="{{ asset('frontend/js/main.js') }}"></script>
     <script defer src="{{ asset('frontend/js/bundle.js') }}"></script>
