@@ -418,28 +418,6 @@
 
                                 <div class="tc sf rn tn un zf dp">
                                     <img class="bf" width="150" height="150"
-                                        src="{{ asset('frontend/images/testimoni/persada.png') }}" alt="User" />
-
-                                    <div>
-                                        <img src="{{ asset('frontend/images/icon-quote.svg') }}" alt="Quote" />
-                                        <p class="ek ik xj _p kc fb">
-                                            "Sebagai klinik, kepercayaan dan visibilitas digital itu krusial. Tim Tribun
-                                            Consulting membantu kami mendominasi pencarian lokal (SEO)
-                                            dan membangun citra profesional di media sosial. Jumlah pasien baru dari online
-                                            meningkat signifikan."
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="i hh rm sg vk xm bi qj">
-                                <!-- Border Shape -->
-                                <span class="rc je md/2 gh xg h q r"></span>
-                                <span class="rc je md/2 mh yg h q p"></span>
-
-                                <div class="tc sf rn tn un zf dp">
-                                    <img class="bf" width="150" height="150"
                                         src="{{ asset('frontend/images/testimoni/debroder.jpg') }}" alt="User" />
 
                                     <div>
@@ -519,8 +497,6 @@
                 </h2>
                 <p class="bb on/5 wo/5 hq" x-text="sectionTitleText"></p>
             </div>
-
-
         </div>
         <!-- Section Title End -->
 
@@ -669,6 +645,112 @@
             </div>
         </div>
     </section>
-
     <!-- ===== CTA End ===== -->
+
+    <!-- ===== FAQ Start ===== -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4 max-w-4xl">
+
+            <div class="animate_top text-center mb-12">
+                <h2 class="fk vj pr kk wm on/5 gq/2 bb _b">
+                    Ada Pertanyaan? Kami Punya Jawabannya.
+                </h2>
+                <p class="bb on/5 wo/5 hq">
+                    Kami hadir untuk menjawab semua keraguan terakhir Anda sebelum memulai kemitraan dengan kami.
+                </p>
+            </div>
+            <div class="animate_bottom space-y-4">
+
+                <div x-data="{ open: false }" class="border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button @click="open = !open" :aria-expanded="open"
+                        class="flex justify-between items-center w-full p-5 text-left transition duration-300 hover:bg-gray-50">
+                        <span class="text-xl font-semibold text-gray-800">
+                            Q: Saya baru memulai bisnis dan tidak tahu harus mulai dari mana di Digital Marketing. Apa langkah pertama yang paling efisien?
+                        </span>
+                        <svg :class="{ 'rotate-180': open }"
+                            class="w-5 h-5 text-blue-600 transform transition-transform duration-300" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+
+                    <div x-cloak x-show="open" x-collapse.duration.500ms>
+                        <div class="p-5 pt-0 text-gray-700 leading-relaxed border-t border-gray-200">
+                            A: Layanan kami komprehensif, meliputi Strategi Digital, Optimasi SEO dan Website, Manajemen
+                            Sosial Media, Jasa Iklan Berbayar (Meta/Google/TikTok Ads), Content Marketing, serta Branding &
+                            Desain Visual. Kami mengurus semuanya agar Anda fokus pada bisnis.
+                        </div>
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button @click="open = !open" :aria-expanded="open"
+                        class="flex justify-between items-center w-full p-5 text-left transition duration-300 hover:bg-gray-50">
+                        <span class="text-xl font-semibold text-gray-800">
+                            Q: Apakah Tribun Consulting hanya melayani bisnis di Makassar?
+                        </span>
+                        <svg :class="{ 'rotate-180': open }"
+                            class="w-5 h-5 text-blue-600 transform transition-transform duration-300" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div x-cloak x-show="open" x-collapse.duration.500ms>
+                        <div class="p-5 pt-0 text-gray-700 leading-relaxed border-t border-gray-200">
+                            A: Kami berbasis di Makassar dan sangat memahami pasar lokal, namun layanan kami **siap melayani
+                            bisnis di seluruh Indonesia**. Kami telah sukses membantu UMKM dan Startup dari berbagai kota.
+                        </div>
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button @click="open = !open" :aria-expanded="open"
+                        class="flex justify-between items-center w-full p-5 text-left transition duration-300 hover:bg-gray-50">
+                        <span class="text-xl font-semibold text-gray-800">
+                            Q: Seberapa cepat saya akan melihat hasil dari Digital Marketing?
+                        </span>
+                        <svg :class="{ 'rotate-180': open }"
+                            class="w-5 h-5 text-blue-600 transform transition-transform duration-300" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div x-cloak x-show="open" x-collapse.duration.500ms>
+                        <div class="p-5 pt-0 text-gray-700 leading-relaxed border-t border-gray-200">
+                            A: Kecepatan hasil bervariasi. **Iklan Berbayar (Ads)** dapat menunjukkan hasil dalam 1-2 minggu
+                            (leads/konversi), sementara **SEO dan Content Marketing** memerlukan 3-6 bulan untuk melihat
+                            peningkatan peringkat yang signifikan. Kami akan memberikan estimasi yang realistis di awal.
+                        </div>
+                    </div>
+                </div>
+
+                <div x-data="{ open: false }" class="bg-white border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+                    <button @click="open = !open" :aria-expanded="open"
+                        class="flex justify-between items-center w-full p-5 text-left transition duration-300 hover:bg-gray-50">
+                        <span class="text-xl font-semibold text-gray-800">
+                            Q: Apakah Pelatihan Digital Marketing Anda bersifat hands-on (praktik langsung)?
+                        </span>
+                        <svg :class="{ 'rotate-180': open }"
+                            class="w-5 h-5 text-blue-600 transform transition-transform duration-300" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div x-cloak x-show="open" x-collapse.duration.500ms>
+                        <div class="p-5 pt-0 text-gray-700 leading-relaxed border-t border-gray-200">
+                            A: Ya. Kurikulum pelatihan kami dirancang secara intensif dan **hands-on**. Anda akan langsung
+                            mempraktikkan penggunaan tools, merumuskan strategi, dan menganalisis data dengan bimbingan
+                            langsung dari praktisi.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ===== FAQ End ===== -->
 @endsection

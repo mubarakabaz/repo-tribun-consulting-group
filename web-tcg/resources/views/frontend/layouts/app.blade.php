@@ -29,7 +29,9 @@
         href="{{ asset('frontend/images/favicon/favicon-16x16.png') }}">
 
     <link rel="manifest" href="{{ asset('frontend/images/favicon/site.webmanifest') }}">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="{{ asset('frontend/css/style.css') }}" rel="stylesheet">
+
 </head>
 
 <body x-data="{ page: 'beranda', 'darkMode': true, 'stickyMenu': false, 'navigationOpen': false, 'scrollTop': false }" x-init="darkMode = JSON.parse(localStorage.getItem('darkMode'));
@@ -39,7 +41,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
         @scroll.window="stickyMenu = (window.pageYOffset > 20) ? true : false">
         <div class="bb ze ki xn 2xl:ud-px-0 oo wf yf i">
             <div class="vd to/4 tc wf yf">
-                <a href="{{ route('index') }}">
+                <a href="{{ route('beranda') }}">
                     <img class="om" src="{{ asset('frontend/images/logo-light.png') }}" style="height: 50px;"
                         alt="Logo Light" />
                     <img class="xc nm" src="{{ asset('frontend/images/logo-dark.png') }}" style="height: 50px;"
@@ -71,7 +73,7 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
             <div class="vd wo/4 sd qo f ho oo wf yf" :class="{ 'd hh rm sr td ud qg ug jc yh': navigationOpen }">
                 <nav>
                     <ul class="tc _o sf yo cg ep">
-                        <li><a href="{{ route('index') }}" class="xl"
+                        <li><a href="{{ route('beranda') }}" class="xl"
                                 :class="{ 'mk': page === 'beranda' }">Beranda</a></li>
                         <li><a href="{{ route('about') }}" class="xl">Tentang Kami</a></li>
                         <li class="c i" x-data="{ dropdown: false }">
@@ -104,7 +106,28 @@ $watch('darkMode', value => localStorage.setItem('darkMode', JSON.stringify(valu
                             </ul>
                             <!-- Dropdown End -->
                         </li>
-                        <li><a href="{{ route('pelatihan') }}" class="xl">Pelatihan</a></li>
+                        <li class="c i" x-data="{ dropdown: false }">
+                            <a href="#!" class="xl tc wf yf bg" @click.prevent="dropdown = !dropdown"
+                                :class="{ 'mk': page === 'workshop-digital-marketing' || page === 'privat-digital-marketing' || page === 'webinar-digital-marketing' }">
+                                Pelatihan
+
+                                <svg :class="{ 'wh': dropdown }" class="th mm we fd pf"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path
+                                        d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+                                </svg>
+                            </a>
+
+                            <!-- Dropdown Start -->
+                            <ul class="a" :class="{ 'tc': dropdown }">
+                                <li><a href="{{ route('pelatihan') }}" class="xl" :class="{ 'mk': page === 'workshop-digital-marketing' }">Workshop Digital Marketing</a>
+                                </li>
+                                <li><a href="{{ route('pelatihan') }}" class="xl" :class="{ 'mk': page === 'privat-digital-marketing' }">Privat Digital Marketing</a>
+                                <li><a href="{{ route('pelatihan') }}" class="xl" :class="{ 'mk': page === 'webinar-digital-marketing' }">Webinar Digital Marketing</a>
+                                </li>
+                            </ul>
+                            <!-- Dropdown End -->
+                        </li>
                         <li><a href="{{ route('artikel') }}" class="xl">Artikel</a></li>
                         <li><a href="{{ route('kontak') }}" class="xl">Kontak</a></li>
                     </ul>

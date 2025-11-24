@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 
 class FrontController extends Controller {
-    public function index(){
+    public function beranda(){
         return view('frontend.main');
     }
 

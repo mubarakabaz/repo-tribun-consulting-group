@@ -2,6 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./src/css/style.css ***!
   \***************************************************************************************************************/
 @import url(https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap);
+@import "flowbite/src/themes/default";
 /*!********************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/swiper/swiper.min.css ***!
   \********************************************************************************************************************************/
@@ -25,7 +26,7 @@
 }
 
 :root {
-    --swiper-theme-color: #007aff
+    --swiper-theme-color: #042A44ff
 }
 
 .swiper {
@@ -1397,6 +1398,12 @@ h6 {
 .pt {
     padding-top: 1.7rem;
 }
+.pt0 {
+    padding-top: 0.7rem;
+}
+.pt1 {
+    padding-top: 2.7rem;
+}
 
 .qb {
     margin-bottom: 1.875rem;
@@ -2225,6 +2232,10 @@ h6 {
 .ji {
     padding-top: 5rem;
     padding-bottom: 5rem;
+}
+.jii {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .ki {
